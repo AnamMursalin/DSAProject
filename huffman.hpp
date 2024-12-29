@@ -42,6 +42,6 @@ class huffman{
             this->inFileName = inFileName;
             this->outFileName = outFileName;
             createArr();}
-       
+         void compress();
         void decompress();};
 #endif
