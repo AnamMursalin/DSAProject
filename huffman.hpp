@@ -27,15 +27,7 @@ class huffman{
         priority_queue <Node*, vector<Node*>, Compare> minHeap;
         void createArr();
         void traverse(Node*, string);
-        int binToDec(string);
-        string decToBin(int);
-        void buildTree(char, string&);
-        void createMinHeap();
-        void createTree();
-        void createCodes();
-        void saveEncodedFile();
-        void saveDecodedFile();
-        void getTree();
+       
 
     public:
         huffman(string inFileName, string outFileName){
