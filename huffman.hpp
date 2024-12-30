@@ -26,7 +26,7 @@ class huffman{
                     return l->freq > r->freq;}};
         priority_queue <Node*, vector<Node*>, Compare> minHeap;
         void createArr();
-        void traverse(Node*, string);
+  void add();
        
 
     public:
