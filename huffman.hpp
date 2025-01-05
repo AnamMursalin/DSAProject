@@ -1,3 +1,4 @@
+ //Header Guards to prevent header files from being included multiple times
 #ifndef HUFFMAN_HPP
 #define HUFFMAN_HPP
 #include <string>
@@ -26,14 +27,22 @@ class huffman{
                     return l->freq > r->freq;}};
         priority_queue <Node*, vector<Node*>, Compare> minHeap;
         void createArr();
-  void add();
-       
+        void traverse(Node*, string);
+        int binToDec(string);
+        string decToBin(int);
+        void buildTree(char, string&);
+        void createMinHeap();
+        void createTree();
+        void createCodes();
+        void saveEncodedFile();
+        void saveDecodedFile();
+        void getTree();
 
     public:
         huffman(string inFileName, string outFileName){
             this->inFileName = inFileName;
             this->outFileName = outFileName;
             createArr();}
-         void compress();
+        void compress();
         void decompress();};
 #endif
